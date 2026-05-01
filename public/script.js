@@ -1,14 +1,29 @@
-// NAV
-document.getElementById("hamburger").onclick = () => {
-  document.getElementById("navLinks").classList.toggle("open");
-};
+// =========================
+// NAVIGATION
+// =========================
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("navLinks");
 
-// THEME
-document.getElementById("themeToggle").onclick = () => {
-  document.body.classList.toggle("light");
-};
+if (hamburger && navLinks) {
+  hamburger.onclick = () => {
+    navLinks.classList.toggle("open");
+  };
+}
 
+// =========================
+// THEME TOGGLE
+// =========================
+const themeToggle = document.getElementById("themeToggle");
+
+if (themeToggle) {
+  themeToggle.onclick = () => {
+    document.body.classList.toggle("light");
+  };
+}
+
+// =========================
 // MENU DATA
+// =========================
 const menuData = [
   {
     name: "Doro Wat",
@@ -27,20 +42,30 @@ const menuData = [
   },
 ];
 
-// MENU RENDER
+// =========================
+// MENU RENDER (FIXED)
+// =========================
 const menuGrid = document.getElementById("menuGrid");
 
-menuData.forEach((item) => {
-  menuGrid.innerHTML += `
-    <div class="card">
-      <img src="${item.img}">
-      <h3>${item.name}</h3>
-      <p>${item.price}</p>
-    </div>
-  `;
-});
+if (menuGrid) {
+  menuGrid.innerHTML = menuData
+    .map(
+      (item) => `
+      <div class="card menu-card">
+        <div class="img-wrapper">
+          <img src="${item.img}" alt="${item.name}">
+        </div>
+        <h3>${item.name}</h3>
+        <p>${item.price}</p>
+      </div>
+    `,
+    )
+    .join("");
+}
 
-// GALLERY
+// =========================
+// GALLERY DATA
+// =========================
 const galleryData = [
   "restaurant.jpg",
   "doro_wat.jpg",
@@ -48,12 +73,31 @@ const galleryData = [
   "chef_image.jpg",
 ];
 
+// =========================
+// GALLERY RENDER (FIXED)
+// =========================
 const galleryGrid = document.getElementById("galleryGrid");
 
-galleryData.forEach((img) => {
-  galleryGrid.innerHTML += `
-    <div class="card">
-      <img src="${img}">
-    </div>
-  `;
+if (galleryGrid) {
+  galleryGrid.innerHTML = galleryData
+    .map(
+      (img) => `
+      <div class="card gallery-card">
+        <div class="img-wrapper">
+          <img src="${img}" alt="gallery image">
+        </div>
+      </div>
+    `,
+    )
+    .join("");
+}
+
+// =========================
+// OPTIONAL: PREVENT IMAGE STRETCHING CLASS ADDER
+// =========================
+document.querySelectorAll("img").forEach((img) => {
+  img.style.width = "100%";
+  img.style.height = "220px";
+  img.style.objectFit = "cover";
+  img.style.borderRadius = "12px";
 });
