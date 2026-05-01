@@ -11,12 +11,14 @@
 
 <!-- NAV -->
 <nav class="navbar" id="navbar">
-  <div class="nav-logo">🍽 Sishu</div>
+  <div class="logo">🍽 Sishu</div>
 
-  <ul class="nav-links" id="navLinks">
+  <ul id="navLinks">
     <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
     <li><a href="#menu">Menu</a></li>
     <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#reservation">Reserve</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 
@@ -25,42 +27,50 @@
 </nav>
 
 <!-- HOME -->
-<section id="home" class="hero">
-
-  <h1>Sishu Restaurant</h1>
-  <p>Taste the Heritage</p>
-
-  <div class="hero-images">
-    <img src="restaurant.jpg" alt="">
-  </div>
-
+<section id="home" class="section">
+  <h1>Welcome to Sishu Restaurant</h1>
+  <p>Authentic Ethiopian Taste 🇪🇹</p>
 </section>
 
 <!-- ABOUT -->
-<section>
+<section id="about" class="section">
   <h2>About Us</h2>
-
-  <div class="about">
-    <img src="restaurant.jpg" alt="">
-    <img src="chef_image.jpg" alt="">
-  </div>
+  <p>We serve traditional Ethiopian dishes with passion and culture.</p>
 </section>
 
 <!-- MENU -->
-<section id="menu">
+<section id="menu" class="section">
   <h2>Menu</h2>
-  <div id="menuGrid"></div>
+  <div id="menuGrid" class="grid"></div>
 </section>
 
 <!-- GALLERY -->
-<section id="gallery">
+<section id="gallery" class="section">
   <h2>Gallery</h2>
-  <div id="galleryGrid"></div>
+  <div id="galleryGrid" class="grid"></div>
+</section>
+
+<!-- RESERVATION -->
+<section id="reservation" class="section">
+  <h2>Reserve Table</h2>
+
+  <form id="reservationForm">
+    <input id="resName" placeholder="Full Name" required />
+    <input id="resPhone" placeholder="Phone" required />
+    <input id="resDate" type="date" required />
+    <input id="resTime" type="time" required />
+    <input id="resGuests" type="number" placeholder="Guests" required />
+    <button type="submit">Book Now</button>
+  </form>
+
+  <div id="formSuccess" class="hidden">✔ Reservation Successful!</div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
+<section id="contact" class="section">
   <h2>Contact</h2>
+  <p>📍 Addis Ababa, Ethiopia</p>
+  <p>📞 +251 911 000 000</p>
 </section>
 
 <script src="script.js"></script>
