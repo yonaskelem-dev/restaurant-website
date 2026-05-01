@@ -3,6 +3,8 @@ const cors = require("cors");
 const path = require("path");
 
 const app = express();
+
+// IMPORTANT: Render uses dynamic PORT
 const PORT = process.env.PORT || 5000;
 
 app.use(cors());
@@ -11,9 +13,10 @@ app.use(express.json());
 // serve frontend
 app.use(express.static(path.join(__dirname, "public")));
 
+// in-memory storage
 let reservations = [];
 
-// HOME (serve index.html automatically)
+// HOME
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
@@ -43,8 +46,7 @@ app.post("/reserve", (req, res) => {
 
   reservations.push(reservation);
 
-  console.log("NEW RESERVATION:");
-  console.log(reservation);
+  console.log("NEW RESERVATION:", reservation);
 
   res.json({
     success: true,
@@ -61,7 +63,7 @@ app.get("/reservations", (req, res) => {
   });
 });
 
-// CLEAR (optional)
+// CLEAR ALL (optional)
 app.delete("/reservations", (req, res) => {
   reservations = [];
   res.json({ message: "Cleared" });

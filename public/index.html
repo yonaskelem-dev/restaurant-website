@@ -1,77 +1,244 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sishu Restaurant</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sishu Restaurant — Taste the Heritage</title>
+
+<link rel="stylesheet" href="style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
 </head>
 
 <body>
 
-<!-- NAV -->
+<!-- ===== NAVBAR ===== -->
 <nav class="navbar" id="navbar">
-  <div class="logo">🍽 Sishu</div>
+  <div class="nav-logo">
+    <span class="logo-eth">🍽</span>
+    <span class="logo-text">Sishu</span>
+  </div>
 
-  <ul id="navLinks">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#menu">Menu</a></li>
-    <li><a href="#gallery">Gallery</a></li>
-    <li><a href="#reservation">Reserve</a></li>
-    <li><a href="#contact">Contact</a></li>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home" class="nav-link active">Home</a></li>
+    <li><a href="#about" class="nav-link">About</a></li>
+    <li><a href="#menu" class="nav-link">Menu</a></li>
+    <li><a href="#gallery" class="nav-link">Gallery</a></li>
+    <li><a href="#reviews" class="nav-link">Reviews</a></li>
+    <li><a href="#reservation" class="nav-link">Reserve</a></li>
+    <li><a href="#contact" class="nav-link">Contact</a></li>
   </ul>
 
-  <button id="themeToggle">☀</button>
-  <button id="hamburger">☰</button>
+  <div class="nav-actions">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <span class="theme-icon">☀</span>
+    </button>
+    <a href="#reservation" class="btn-reserve-nav">Reserve Table</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
 
-<!-- HOME -->
-<section id="home" class="section">
-  <h1>Welcome to Sishu Restaurant</h1>
-  <p>Authentic Ethiopian Taste 🇪🇹</p>
+<!-- ===== HOME ===== -->
+<section id="home" class="section hero-section">
+
+  <div class="hero-bg">
+    <div class="hero-grain"></div>
+    <div class="hero-circles">
+      <div class="circle c1"></div>
+      <div class="circle c2"></div>
+      <div class="circle c3"></div>
+    </div>
+  </div>
+
+  <div class="hero-content">
+    <p class="hero-eyebrow">— Addis Ababa, Ethiopia —</p>
+
+    <h1 class="hero-title">
+      <span class="title-line">Sishu</span>
+      <span class="title-sub">Restaurant</span>
+    </h1>
+
+    <p class="hero-tagline">Where Ancient Flavors Meet<br>Modern Soul</p>
+
+    <div class="hero-ctas">
+      <a href="#reservation" class="btn-primary">Reserve a Table</a>
+      <a href="#menu" class="btn-ghost">Explore Menu</a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat"><strong>12+</strong><span>Years of Tradition</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><strong>50+</strong><span>Authentic Dishes</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><strong>4.9★</strong><span>Guest Rating</span></div>
+    </div>
+  </div>
+
+  <div class="hero-scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+
 </section>
 
-<!-- ABOUT -->
-<section id="about" class="section">
-  <h2>About Us</h2>
-  <p>We serve traditional Ethiopian dishes with passion and culture.</p>
+<!-- ===== ABOUT ===== -->
+<section id="about" class="section about-section">
+
+<div class="section-container">
+
+<div class="about-grid">
+
+<!-- VISUAL -->
+<div class="about-visual">
+  <div class="about-img-stack">
+
+    <!-- MAIN IMAGE -->
+    <div class="about-img-card main-card">
+      <img src="images/restaurant.jpg" alt="Restaurant" style="width:100%;height:100%;object-fit:cover;border-radius:16px;">
+    </div>
+
+    <!-- SIDE IMAGE -->
+    <div class="about-img-card side-card">
+      <img src="images/chef.jpg" alt="Chef" style="width:100%;height:100%;object-fit:cover;border-radius:16px;">
+    </div>
+
+    <div class="about-badge">
+      <span>EST.</span>
+      <strong>2012</strong>
+    </div>
+
+  </div>
+</div>
+
+<!-- TEXT -->
+<div class="about-content">
+  <p class="section-eyebrow">Our Story</p>
+
+  <h2 class="section-title">A Journey Through<br><em>Ethiopian Heritage</em></h2>
+
+  <p class="about-text">
+    Sishu was born from a simple belief: that food is the most honest expression of a people's soul.
+  </p>
+
+  <p class="about-text">
+    Every injera is fermented for 72 hours. Every berbere blend is ground by hand.
+  </p>
+
+  <div class="about-pillars">
+    <div class="pillar">
+      <span class="pillar-icon">🌾</span>
+      <div>
+        <h4>Farm to Table</h4>
+        <p>Sourced daily from local farms.</p>
+      </div>
+    </div>
+
+    <div class="pillar">
+      <span class="pillar-icon">🎵</span>
+      <div>
+        <h4>Cultural Ambience</h4>
+        <p>Live traditional music every weekend.</p>
+      </div>
+    </div>
+
+    <div class="pillar">
+      <span class="pillar-icon">🤝</span>
+      <div>
+        <h4>Community First</h4>
+        <p>Supporting local culinary training programs.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+</div>
 </section>
 
-<!-- MENU -->
-<section id="menu" class="section">
-  <h2>Menu</h2>
-  <div id="menuGrid" class="grid"></div>
+<!-- ===== MENU ===== -->
+<section id="menu" class="section menu-section">
+  <div class="section-container">
+    <div class="section-header">
+      <p class="section-eyebrow">What We Serve</p>
+      <h2 class="section-title">Our Menu</h2>
+      <p class="section-subtitle">Rooted in tradition, plated with love</p>
+    </div>
+
+    <div class="menu-tabs">
+      <button class="tab-btn active">Traditional</button>
+      <button class="tab-btn">Specials</button>
+      <button class="tab-btn">Drinks</button>
+      <button class="tab-btn">Vegetarian</button>
+    </div>
+
+    <div class="menu-grid" id="menuGrid"></div>
+  </div>
 </section>
 
-<!-- GALLERY -->
-<section id="gallery" class="section">
-  <h2>Gallery</h2>
-  <div id="galleryGrid" class="grid"></div>
+<!-- ===== GALLERY ===== -->
+<section id="gallery" class="section gallery-section">
+  <div class="section-container">
+    <div class="section-header">
+      <p class="section-eyebrow">Visual Journey</p>
+      <h2 class="section-title">Gallery</h2>
+    </div>
+
+    <div class="gallery-filter">
+      <button class="filter-btn active">All</button>
+      <button class="filter-btn">Food</button>
+      <button class="filter-btn">Interior</button>
+      <button class="filter-btn">Events</button>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid"></div>
+  </div>
 </section>
 
-<!-- RESERVATION -->
-<section id="reservation" class="section">
-  <h2>Reserve Table</h2>
+<!-- ===== REVIEWS ===== -->
+<section id="reviews" class="section reviews-section">
+  <div class="section-container">
+    <div class="section-header">
+      <p class="section-eyebrow">What Guests Say</p>
+      <h2 class="section-title">Reviews</h2>
+    </div>
 
-  <form id="reservationForm">
-    <input id="resName" placeholder="Full Name" required />
-    <input id="resPhone" placeholder="Phone" required />
-    <input id="resDate" type="date" required />
-    <input id="resTime" type="time" required />
-    <input id="resGuests" type="number" placeholder="Guests" required />
-    <button type="submit">Book Now</button>
-  </form>
-
-  <div id="formSuccess" class="hidden">✔ Reservation Successful!</div>
+    <div class="reviews-carousel" id="reviewsCarousel"></div>
+  </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="section">
-  <h2>Contact</h2>
-  <p>📍 Addis Ababa, Ethiopia</p>
-  <p>📞 +251 911 000 000</p>
+<!-- ===== RESERVATION ===== -->
+<section id="reservation" class="section reservation-section">
+  <div class="section-container">
+    <div class="reservation-grid">
+
+      <div class="reservation-info">
+        <p class="section-eyebrow">Book a Seat</p>
+        <h2 class="section-title">Reserve<br><em>Your Table</em></h2>
+      </div>
+
+      <form class="res-form" id="reservationForm"></form>
+
+    </div>
+  </div>
 </section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="section contact-section">
+  <div class="section-container">
+    <div class="section-header">
+      <p class="section-eyebrow">Find Us</p>
+      <h2 class="section-title">Contact & Location</h2>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-inner">
+    <p class="footer-copy">© 2024 Sishu Restaurant</p>
+  </div>
+</footer>
 
 <script src="script.js"></script>
 </body>
