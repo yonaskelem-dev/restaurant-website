@@ -1,6 +1,31 @@
-/* =========================
-GLOBAL RESET
-========================= */
+/* =============================================
+SISHU RESTAURANT — FINAL FIXED CSS
+============================================= */
+
+:root {
+  --eth-green: #078930;
+  --eth-yellow: #FCDD09;
+  --eth-red: #DA121A;
+
+  --bg-primary: #0d0d0d;
+  --bg-secondary: #141414;
+  --bg-card: #1a1a1a;
+  --bg-card-hover: #222222;
+
+  --text-primary: #f0ebe0;
+  --text-secondary:#b5a99a;
+  --text-muted: #6b6058;
+
+  --border: rgba(255,255,255,0.07);
+  --border-strong: rgba(255,255,255,0.15);
+
+  --shadow: 0 4px 32px rgba(0,0,0,0.5);
+  --shadow-card: 0 8px 40px rgba(0,0,0,0.6);
+
+  --nav-bg: rgba(13,13,13,0.88);
+}
+
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -8,111 +33,110 @@ GLOBAL RESET
 }
 
 body {
-  font-family: "Outfit", sans-serif;
-  background: #0d0d0d;
-  color: #fff;
+  font-family: 'Outfit', sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
 }
 
-/* =========================
-NAVBAR
-========================= */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 25px;
-  background: #111;
-  position: fixed;
+img {
   width: 100%;
-  top: 0;
+  height: 220px;          /* SAME SIZE FOR ALL IMAGES */
+  object-fit: cover;      /* FIX STRETCH ISSUE */
+  display: block;
+  border-radius: 12px;
 }
 
+/* NAV FIX */
 .nav-links {
   display: flex;
-  gap: 15px;
+  gap: 20px;
   list-style: none;
 }
 
-.nav-links a {
-  color: white;
-  text-decoration: none;
-}
-
-/* =========================
-SECTIONS FIX (IMPORTANT)
-========================= */
-.section {
-  padding: 100px 20px;
-  width: 100%;
+.nav-links.open {
   display: block;
 }
 
-.container {
-  max-width: 1100px;
+/* SECTION FIX */
+.section-container {
+  max-width: 1200px;
   margin: auto;
+  padding: 80px 20px;
+}
+
+/* HERO */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
-/* =========================
-HERO
-========================= */
-.hero {
-  height: 100vh;
+/* ABOUT IMAGE FIX */
+.about-img-card {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+/* MENU GRID FIX */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--bg-card);
+  padding: 15px;
+  border-radius: 14px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* GALLERY FIX */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.gallery-grid .card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* FOOTER FIX (YOUR LEFT TEXT ISSUE) */
+.footer {
+  text-align: center;
+  padding: 40px;
+  background: var(--bg-secondary);
+  margin-top: 50px;
+}
+
+/* RESERVATION FORM FIX */
+.res-form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  gap: 12px;
 }
 
-/* =========================
-GRID (MENU + GALLERY)
-========================= */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  margin-top: 30px;
+.res-form input,
+.res-form button {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
 }
 
-/* =========================
-CARDS + IMAGE FIX (MAIN FIX)
-========================= */
-.card {
-  background: #1a1a1a;
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  display: block;
-}
-
-/* =========================
-CONTACT FIX (YOUR ISSUE)
-========================= */
-.contact {
-  background: #141414;
-  padding-bottom: 120px;
-}
-
-/* =========================
-FOOTER FIX (BOTTOM STUCK FIX)
-========================= */
-footer {
-  text-align: center;
-  padding: 30px;
-  background: #111;
-  border-top: 1px solid #333;
-}
-
-/* =========================
-RESPONSIVE FIX
-========================= */
-@media (max-width: 768px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
+.res-form button {
+  background: var(--eth-green);
+  color: white;
+  cursor: pointer;
 }
