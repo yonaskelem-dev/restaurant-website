@@ -53,83 +53,121 @@ Ethiopian-inspired modern restaurant design
   --nav-bg: rgba(250,246,239,0.9);
 }
 
-/* ======================================================
-🔥 IMAGE FIX (THIS IS WHAT FIXES YOUR PROBLEM)
-====================================================== */
+/* =============================================
+🔥 GLOBAL IMAGE FIX (IMPORTANT)
+============================================= */
 
-/* ALL IMAGES SAME SIZE + NO STRETCHING */
+/* ALL <img> TAGS */
 img {
   width: 100%;
-  height: 220px;          /* SAME HEIGHT FOR ALL IMAGES */
-  object-fit: cover;      /* prevents weird distortion */
+  height: 220px;
+  object-fit: cover;
   display: block;
   border-radius: 12px;
 }
 
-/* CARD IMAGE CONTROL (menu + gallery consistency) */
-.card img {
+/* CARD IMAGES (MENU + OTHER CARDS) */
+.card img,
+.menu-item img {
   width: 100%;
   height: 220px;
   object-fit: cover;
-}
-
-/* ======================================================
-ABOUT IMAGES (YOUR ORIGINAL + FIXED BEHAVIOR)
-====================================================== */
-.img1 {
-  background: url("restaurant.jpg") center/cover no-repeat;
-}
-
-.img2 {
-  background: url("chef_image.jpg") center/cover no-repeat;
-}
-
-/* ======================================================
-GALLERY IMAGES (YOUR ORIGINAL)
-====================================================== */
-.g-doro {
-  background: url("doro_wat.jpg") center/cover no-repeat;
-}
-
-.g-kitfo {
-  background: url("kitfo_image.jpg") center/cover no-repeat;
-}
-
-.g-injera {
-  background: url("injera.jpg") center/cover no-repeat;
-}
-
-.g-coffee {
-  background: url("coffee.jpg") center/cover no-repeat;
-}
-
-.g-shiro {
-  background: url("shiro.jpg") center/cover no-repeat;
-}
-
-.g-tibs {
-  background: url("tibs.jpg") center/cover no-repeat;
-}
-
-.g-int1 {
-  background: url("interior1.jpg") center/cover no-repeat;
-}
-
-.g-int2 {
-  background: url("interior2.jpg") center/cover no-repeat;
-}
-
-.g-event {
-  background: url("event.jpg") center/cover no-repeat;
-}
-
-/* OPTIONAL: dark overlay for readability */
-.gallery-placeholder,
-.img-placeholder {
-  background-blend-mode: darken;
-  background-color: rgba(0,0,0,0.3);
+  border-radius: 12px;
 }
 
 /* =============================================
-KEEPING EVERYTHING ELSE EXACTLY SAME BELOW
+🔥 BACKGROUND IMAGE FIX (ABOUT + GALLERY)
 ============================================= */
+
+/* ABOUT IMAGES */
+.img1,
+.img2 {
+  width: 100%;
+  height: 260px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 14px;
+}
+
+/* GALLERY IMAGES */
+.g-doro,
+.g-kitfo,
+.g-injera,
+.g-coffee,
+.g-shiro,
+.g-tibs,
+.g-int1,
+.g-int2,
+.g-event {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* =============================================
+GLOBAL CLEANUP (PREVENT WEIRD LAYOUT)
+============================================= */
+.card,
+.menu-item,
+.gallery-item {
+  overflow: hidden;
+}
+
+/* =============================================
+YOUR ORIGINAL STYLES (UNCHANGED BELOW)
+============================================= */
+
+/* ---- CSS VARIABLES ---- */
+:root {
+  --eth-green: #078930;
+  --eth-yellow: #FCDD09;
+  --eth-red: #DA121A;
+
+  --bg-primary: #0d0d0d;
+  --bg-secondary: #141414;
+  --bg-card: #1a1a1a;
+  --bg-card-hover: #222222;
+
+  --text-primary: #f0ebe0;
+  --text-secondary:#b5a99a;
+  --text-muted: #6b6058;
+
+  --border: rgba(255,255,255,0.07);
+  --border-strong: rgba(255,255,255,0.15);
+
+  --shadow: 0 4px 32px rgba(0,0,0,0.5);
+  --shadow-card: 0 8px 40px rgba(0,0,0,0.6);
+
+  --accent-gold: #d4a853;
+  --accent-amber: #e8891a;
+
+  --nav-bg: rgba(13,13,13,0.88);
+}
+
+/* LIGHT MODE */
+[data-theme="light"] {
+  --bg-primary: #faf6ef;
+  --bg-secondary: #f3ede2;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f8f2e8;
+
+  --text-primary: #1a1208;
+  --text-secondary:#5c4a30;
+  --text-muted: #9e8a6e;
+
+  --border: rgba(0,0,0,0.07);
+  --border-strong: rgba(0,0,0,0.15);
+
+  --shadow: 0 4px 24px rgba(0,0,0,0.08);
+  --shadow-card: 0 8px 32px rgba(0,0,0,0.1);
+
+  --accent-gold: #b8860b;
+  --accent-amber: #c8700e;
+
+  --nav-bg: rgba(250,246,239,0.9);
+}
