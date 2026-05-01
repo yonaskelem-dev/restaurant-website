@@ -3,8 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-<title>Sishu Restaurant — Taste the Heritage</title>
+<title>Sishu Restaurant</title>
 
 <link rel="stylesheet" href="style.css" />
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -13,11 +12,8 @@
 <body>
 
 <!-- NAV -->
-<nav class="navbar" id="navbar">
-  <div class="nav-logo">
-    <span>🍽</span>
-    <span>Sishu</span>
-  </div>
+<nav class="navbar">
+  <div class="logo">🍽 Sishu</div>
 
   <ul class="nav-links" id="navLinks">
     <li><a href="#home">Home</a></li>
@@ -29,81 +25,66 @@
     <li><a href="#contact">Contact</a></li>
   </ul>
 
-  <div class="nav-actions">
-    <button id="themeToggle">☀</button>
-    <a href="#reservation">Reserve</a>
-    <button id="hamburger">☰</button>
-  </div>
+  <button id="hamburger">☰</button>
 </nav>
 
 <!-- HERO -->
-<section id="home" class="hero-section">
+<section id="home" class="hero">
   <h1>Sishu Restaurant</h1>
   <p>Where Ancient Flavors Meet Modern Soul</p>
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="about-section">
-
-  <div class="about-grid">
-
-    <!-- IMAGE LEFT -->
-    <div class="about-images">
-
-      <div class="img-box">
-        <img src="restaurant.jpg" alt="Restaurant">
-      </div>
-
-      <div class="img-box small">
-        <img src="chef_image.jpg" alt="Chef">
-      </div>
-
-    </div>
-
-    <!-- TEXT RIGHT -->
-    <div class="about-text">
-      <h2>Our Story</h2>
-      <p>
-        Sishu was born from a belief that food is the soul of culture.
-      </p>
-    </div>
-
+<section id="about" class="section">
+  <div class="container">
+    <h2>Our Story</h2>
+    <p>Ethiopian heritage dining experience.</p>
   </div>
 </section>
 
-<!-- MENU (JS will fill) -->
-<section id="menu">
-  <h2>Menu</h2>
-  <div class="menu-grid" id="menuGrid"></div>
+<!-- MENU -->
+<section id="menu" class="section">
+  <div class="container">
+    <h2>Menu</h2>
+    <div class="grid" id="menuGrid"></div>
+  </div>
 </section>
 
-<!-- GALLERY (JS will fill) -->
-<section id="gallery">
-  <h2>Gallery</h2>
-  <div class="gallery-grid" id="galleryGrid"></div>
+<!-- GALLERY -->
+<section id="gallery" class="section">
+  <div class="container">
+    <h2>Gallery</h2>
+    <div class="grid" id="galleryGrid"></div>
+  </div>
 </section>
 
 <!-- REVIEWS -->
-<section id="reviews">
-  <h2>Reviews</h2>
-  <div id="reviewsCarousel"></div>
+<section id="reviews" class="section">
+  <div class="container">
+    <h2>Reviews</h2>
+    <p>What customers say</p>
+  </div>
 </section>
 
 <!-- RESERVATION -->
-<section id="reservation">
-  <h2>Reserve Table</h2>
-  <form id="reservationForm"></form>
+<section id="reservation" class="section">
+  <div class="container">
+    <h2>Reserve Table</h2>
+    <p>Book your table easily</p>
+  </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Addis Ababa, Ethiopia</p>
+<section id="contact" class="section contact">
+  <div class="container">
+    <h2>Contact</h2>
+    <p>Addis Ababa, Ethiopia</p>
+  </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2024 Sishu Restaurant</p>
+  © 2024 Sishu Restaurant
 </footer>
 
 <script src="script.js"></script>
